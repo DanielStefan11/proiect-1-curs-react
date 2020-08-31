@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "email": "Sincere@april.biz",
+    "image": "https://randomuser.me/api/portraits/men/88.jpg",
+    "salary": "4500",
+    "currency": "Lei"
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "email": "Shanna@melissa.tv",
+    "image": "https://randomuser.me/api/portraits/men/78.jpg",
+    "salary": "2500",
+    "currency": "Lei"
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "email": "Nathan@yesenia.net",
+    "image": "https://randomuser.me/api/portraits/women/84.jpg",
+    "salary": "4500",
+    "currency": "Lei"
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "email": "Julianne.OConner@kory.org",
+    "image": "https://randomuser.me/api/portraits/women/86.jpg",
+    "salary": "5500",
+    "currency": "Lei"
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "email": "Lucio_Hettinger@annie.ca",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg",
+    "salary": "5000",
+    "currency": "Lei"
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "email": "Karley_Dach@jasper.info",
+    "image": "https://randomuser.me/api/portraits/women/89.jpg",
+    "salary": "8500",
+    "currency": "Lei"
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "email": "Telly.Hoeger@billy.biz",
+    "image": "https://randomuser.me/api/portraits/men/58.jpg",
+    "salary": "4900",
+    "currency": "Lei"
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "email": "Sherwood@rosamond.me",
+    "image": "https://randomuser.me/api/portraits/men/45.jpg",
+    "salary": "6900",
+    "currency": "Lei"
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "email": "Chaim_McDermott@dana.io",
+    "image": "https://randomuser.me/api/portraits/women/28.jpg",
+    "salary": "9500",
+    "currency": "Lei"
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "image": "https://randomuser.me/api/portraits/women/81.jpg",
+    "salary": "3500",
+    "currency": "Lei"
+  },
+  {
+    "id": 11,
+    "name": "Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "image": "https://randomuser.me/api/portraits/women/81.jpg",
+    "salary": "3500",
+    "currency": "Lei"
+  },
+  {
+    "id": 12,
+    "name": "Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "image": "https://randomuser.me/api/portraits/women/81.jpg",
+    "salary": "3500",
+    "currency": "Lei"
+  },
+  {
+    "id": 13,
+    "name": "Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "image": "https://randomuser.me/api/portraits/women/81.jpg",
+    "salary": "3500",
+    "currency": "Lei"
+  },
+  {
+    "id": 14,
+    "name": "Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "image": "https://randomuser.me/api/portraits/women/81.jpg",
+    "salary": "3500",
+    "currency": "Lei"
+  },
+  {
+    "id": 15,
+    "name": "Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "image": "https://randomuser.me/api/portraits/women/81.jpg",
+    "salary": "3500",
+    "currency": "Lei"
+  }
+]
