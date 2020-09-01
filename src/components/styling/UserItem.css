@@ -1,0 +1,37 @@
+.user-item {
+  position: relative;
+  text-align: center;
+  padding: 1rem 0;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 400px;
+}
+
+.user-item:hover {
+  box-shadow: 5px 5px 10px #33ccff, -5px -5px 10px #33ccff;
+}
+
+.user-item img {
+  border-radius: 10px;
+}
+
+.user-item span {
+  font-weight: bold;
+}
+
+.user-item button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: transform 0.25s;
+  outline: none;
+}
+
+.user-item button:hover {
+  transform: rotate(90deg);
+  color: #dc143c;
+}
