@@ -3,6 +3,7 @@ import "./styling/UserItem.css";
 
 function UserItem(props) {
   const {
+    id,
     image,
     name,
     email,
@@ -25,7 +26,7 @@ function UserItem(props) {
         {salary} {currency}
       </p>
       {isGoldClient ? <h3>Client GOLD</h3> : null}
-      <button onClick={handleDeleteUser}>
+      <button onClick={() => handleDeleteUser(id)}>
         <i className="fas fa-times fa-2x"></i>
       </button>
     </div>
