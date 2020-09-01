@@ -1,0 +1,15 @@
+.posts-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.post-list h2 {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem 0;
+  border-radius: 10px;
+  margin-left: 5rem;
+  box-shadow: 0 2px 10px rgb(122, 120, 120);
+}
