@@ -1,0 +1,19 @@
+.footer-container {
+  background-color: #000;
+  color: #fff;
+  margin-top: 3rem;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container * {
+  margin: 1rem 0;
+}
+
+.footer-container p:not(.year) {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
