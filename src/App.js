@@ -125,10 +125,6 @@ class App extends React.Component {
 
   // Delete User
   handleDeleteUser(id) {
-    console.log("ar trebui sa se stearga");
-    console.log(this.state.users[0].id);
-    console.log(this.state.users[1].id);
-
     this.setState((previousState) => {
       return {
         users: previousState.users.filter((user) => user.id !== id),
@@ -191,7 +187,7 @@ class App extends React.Component {
           {this.state.toggleUsers ? (
             <UserList
               users={this.state.users}
-              handleDeleteUser={() => this.handleDeleteUser()}
+              handleDeleteUser={(id) => this.handleDeleteUser(id)}
             />
           ) : null}
 
