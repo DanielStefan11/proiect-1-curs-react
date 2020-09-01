@@ -2,7 +2,7 @@ import React from "react";
 import "./styling/PostItem.css";
 
 function PostItem(props) {
-  const { title, content } = props;
+  const { id, title, content, handleDeletePost } = props;
 
   return (
     <div className="post-item">
@@ -12,7 +12,10 @@ function PostItem(props) {
         <p>{content}</p>
       </div>
       <button>
-        <i className="fas fa-times fa-2x"></i>
+        <i
+          className="fas fa-times fa-2x"
+          onClick={() => handleDeletePost(id)}
+        ></i>
       </button>
     </div>
   );

@@ -3,7 +3,7 @@ import PostItem from "./PostItem";
 import "./styling/PostList.css";
 
 function PostList(props) {
-  const { posts } = props;
+  const { posts, handleDeletePost } = props;
 
   return (
     <div className="post-list">
@@ -16,6 +16,7 @@ function PostList(props) {
               title={post.title}
               content={post.body}
               key={index}
+              handleDeletePost={handleDeletePost}
             />
           );
         })}

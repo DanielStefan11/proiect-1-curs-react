@@ -125,9 +125,18 @@ class App extends React.Component {
 
   // Delete User
   handleDeleteUser(id) {
-    this.setState((previousState) => {
+    this.setState((previousUsersState) => {
       return {
-        users: previousState.users.filter((user) => user.id !== id),
+        users: previousUsersState.users.filter((user) => user.id !== id),
+      };
+    });
+  }
+
+  // Delete Post
+  handleDeletePost(id) {
+    this.setState((previousPostsState) => {
+      return {
+        posts: previousPostsState.posts.filter((post) => post.id !== id),
       };
     });
   }
@@ -192,7 +201,10 @@ class App extends React.Component {
           ) : null}
 
           {this.state.togglePosts ? (
-            <PostList posts={this.state.posts} />
+            <PostList
+              posts={this.state.posts}
+              handleDeletePost={(id) => this.handleDeletePost(id)}
+            />
           ) : null}
         </div>
 
