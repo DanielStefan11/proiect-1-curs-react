@@ -1,8 +1,108 @@
-/* Daca vrem ca aplicatia sa ocupe intreg viewport-ul. */
+/* General App Style */
 .app {
+  position: relative;
   min-height: 100vh;
 }
 
 .app h1 {
   margin-top: 0;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 10px rgb(122, 120, 120);
+}
+
+/* Form container */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin: 2rem 0;
+}
+
+.form-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 600px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+.line-separator {
+  height: 300px;
+  width: 2px;
+  background-color: #000;
+  margin-right: 1rem;
+}
+
+/* Buttons */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-container label {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.btn-container input[type="color"] {
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 150px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+.btn-container input[type="color"]:hover {
+  box-shadow: 0 5px 10px;
+}
+
+.btn-container input[type="button"] {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 200px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #000;
+  background-color: transparent;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 300ms ease-in-out;
+  border-radius: 10px;
+}
+
+.btn-container input[type="button"]:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Lists */
+.lists {
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+/* Scoll To Top Button */
+.scroll-top-btn {
+  z-index: 1;
+  cursor: pointer;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #fff;
+  outline: none;
+  border: 3px solid #000;
 }
