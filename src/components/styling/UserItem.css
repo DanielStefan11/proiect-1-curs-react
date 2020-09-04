@@ -33,5 +33,4 @@
 
 .user-item button:hover {
   transform: rotate(90deg);
-  color: #dc143c;
 }

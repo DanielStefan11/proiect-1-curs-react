@@ -1,5 +1,7 @@
 import React from "react";
 import "./styling/PostItem.css";
+// React icons
+import { GrClose } from "react-icons/gr";
 
 function PostItem(props) {
   const { id, title, content, handleDeletePost } = props;
@@ -11,11 +13,8 @@ function PostItem(props) {
         <div className="title-underline"></div>
         <p>{content}</p>
       </div>
-      <button>
-        <i
-          className="fas fa-times fa-2x"
-          onClick={() => handleDeletePost(id)}
-        ></i>
+      <button onClick={() => handleDeletePost(id)}>
+        <GrClose size="1.5rem" />
       </button>
     </div>
   );

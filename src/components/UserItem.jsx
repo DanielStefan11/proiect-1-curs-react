@@ -1,5 +1,7 @@
 import React from "react";
 import "./styling/UserItem.css";
+// React icons
+import { GrClose } from "react-icons/gr";
 
 function UserItem(props) {
   const {
@@ -27,7 +29,7 @@ function UserItem(props) {
       </p>
       {isGoldClient ? <h3>Client GOLD</h3> : null}
       <button onClick={() => handleDeleteUser(id)}>
-        <i className="fas fa-times fa-2x"></i>
+        <GrClose size="1.5rem" color="red" />
       </button>
     </div>
   );
