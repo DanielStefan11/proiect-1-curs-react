@@ -4,7 +4,10 @@ import UserList from "./components/UserList";
 import PostList from "./components/PostList";
 import "./App.css";
 import users from "./utils/users.json";
-import Footer from "./components/Footer";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import About from "./components/pages/About";
+import Page404 from "./components/pages/Page404";
 
 class App extends React.Component {
   constructor() {
@@ -143,84 +146,114 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        className="app"
-        style={{ background: this.state.background, color: this.state.color }}
-      >
-        <h1>Admin panel - Proiectul 1</h1>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <div
+                  className="app"
+                  style={{
+                    background: this.state.background,
+                    color: this.state.color,
+                  }}
+                >
+                  <h1>Admin panel - Proiectul 1</h1>
 
-        <div className="form-container">
-          <div className="form-content">
-            {/* Form */}
-            <UserAddForm
-              submitAddForm={(event, name, email, salary, isGoldClient) =>
-                this.submitAddForm(event, name, email, salary, isGoldClient)
-              }
+                  <div className="form-container">
+                    <div className="form-content">
+                      {/* Form */}
+                      <UserAddForm
+                        submitAddForm={(
+                          event,
+                          name,
+                          email,
+                          salary,
+                          isGoldClient
+                        ) =>
+                          this.submitAddForm(
+                            event,
+                            name,
+                            email,
+                            salary,
+                            isGoldClient
+                          )
+                        }
+                      />
+
+                      <div className="line-separator"></div>
+
+                      {/* Buttons */}
+                      <div className="btn-container">
+                        <label htmlFor="bg-color">
+                          Schimbă culoarea fundalului{" "}
+                        </label>
+                        <input
+                          type="color"
+                          onChange={(event) => this.changeColor(event)}
+                        />
+
+                        <label htmlFor="text-color">
+                          Schimbă culoarea textului
+                        </label>
+                        <input
+                          type="color"
+                          onChange={(event) => this.changeTextColor(event)}
+                        />
+
+                        {/* <label htmlFor="show-users">Afișează Utilizatori</label> */}
+                        <input
+                          type="button"
+                          value={this.state.usersBtn}
+                          onClick={() => this.handleToggleUsers()}
+                        />
+
+                        {/* <label htmlFor="show-posts">Afișează Postări</label> */}
+                        <input
+                          type="button"
+                          value={this.state.postsBtn}
+                          onClick={() => this.handleTogglePosts()}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Lists */}
+                  <div className="lists">
+                    {this.state.toggleUsers ? (
+                      <UserList
+                        users={this.state.users}
+                        handleDeleteUser={(id) => this.handleDeleteUser(id)}
+                      />
+                    ) : null}
+
+                    {this.state.togglePosts ? (
+                      <PostList
+                        posts={this.state.posts}
+                        handleDeletePost={(id) => this.handleDeletePost(id)}
+                      />
+                    ) : null}
+                  </div>
+
+                  {/* Scroll To Top Button */}
+                  {this.state.scrollBtnVizibility ? (
+                    <button
+                      className="scroll-top-btn"
+                      onClick={() => this.handleScrollToTop()}
+                    >
+                      <i className="fas fa-arrow-circle-up fa-2x"></i>
+                    </button>
+                  ) : null}
+                </div>
+              )}
             />
-
-            <div className="line-separator"></div>
-
-            {/* Buttons */}
-            <div className="btn-container">
-              <label htmlFor="bg-color">Schimbă culoarea fundalului </label>
-              <input
-                type="color"
-                onChange={(event) => this.changeColor(event)}
-              />
-
-              <label htmlFor="text-color">Schimbă culoarea textului</label>
-              <input
-                type="color"
-                onChange={(event) => this.changeTextColor(event)}
-              />
-
-              {/* <label htmlFor="show-users">Afișează Utilizatori</label> */}
-              <input
-                type="button"
-                value={this.state.usersBtn}
-                onClick={() => this.handleToggleUsers()}
-              />
-
-              {/* <label htmlFor="show-posts">Afișează Postări</label> */}
-              <input
-                type="button"
-                value={this.state.postsBtn}
-                onClick={() => this.handleTogglePosts()}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Lists */}
-        <div className="lists">
-          {this.state.toggleUsers ? (
-            <UserList
-              users={this.state.users}
-              handleDeleteUser={(id) => this.handleDeleteUser(id)}
-            />
-          ) : null}
-
-          {this.state.togglePosts ? (
-            <PostList
-              posts={this.state.posts}
-              handleDeletePost={(id) => this.handleDeletePost(id)}
-            />
-          ) : null}
-        </div>
-
-        {/* Scroll To Top Button */}
-        {this.state.scrollBtnVizibility ? (
-          <button
-            className="scroll-top-btn"
-            onClick={() => this.handleScrollToTop()}
-          >
-            <i className="fas fa-arrow-circle-up fa-2x"></i>
-          </button>
-        ) : null}
-
-        {/* Footer */}
-        <Footer />
-      </div>
+            <Route path="/despre" component={About} />
+            <Route path="*" component={Page404} />
+          </Switch>
+        </Layout>
+      </BrowserRouter>
     );
   }
 }
