@@ -1,10 +1,12 @@
 import React from "react";
 import "../styling/About.css";
+// React icons
+import { SiHtml5, SiCss3, SiJavascript, SiReact } from "react-icons/si";
 
 function About() {
   return (
     <div className="about-page">
-      <div>
+      <div className='about-heading-container'>
         <h1>Despre acest proiect</h1>
         <div className="about-underscore"></div>
       </div>
@@ -12,19 +14,19 @@ function About() {
       <h3>Tehnologii utilizate</h3>
       <div className="tech-list">
         <div>
-          <i className="fab fa-html5 fa-2x"></i>
+          <SiHtml5 size="4rem" color="#DD4B25" />
           <p>HTML5</p>
         </div>
         <div>
-          <i className="fab fa-css3-alt fa-2x"></i>
+          <SiCss3 size="4rem" color="#254BDD" />
           <p>CSS3</p>
         </div>
         <div>
-          <i className="fab fa-js-square fa-2x"></i>
+          <SiJavascript size="4rem" color="#EFD81D" />
           <p>Javascript</p>
         </div>
         <div>
-          <i className="fab fa-react fa-2x"></i>
+          <SiReact size="4rem" color="#50BBD7" />
           <p>React.js</p>
         </div>
       </div>
