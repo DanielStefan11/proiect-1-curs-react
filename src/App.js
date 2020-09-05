@@ -8,6 +8,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import About from "./components/pages/About";
 import Page404 from "./components/pages/Page404";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 class App extends React.Component {
   constructor() {
@@ -110,22 +111,6 @@ class App extends React.Component {
     });
   }
 
-  // Scroll To Top Button
-  toggleVisibility() {
-    if (window.pageYOffset > 200) {
-      this.setState({ scrollBtnVizibility: true });
-    } else {
-      this.setState({ scrollBtnVizibility: false });
-    }
-  }
-
-  handleScrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
-
   // Delete User
   handleDeleteUser(id) {
     this.setState((previousUsersState) => {
@@ -141,6 +126,22 @@ class App extends React.Component {
       return {
         posts: previousPostsState.posts.filter((post) => post.id !== id),
       };
+    });
+  }
+
+  // Scroll To Top Button
+  toggleVisibility() {
+    if (window.pageYOffset > 200) {
+      this.setState({ scrollBtnVizibility: true });
+    } else {
+      this.setState({ scrollBtnVizibility: false });
+    }
+  }
+
+  handleScrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
   }
 
@@ -237,15 +238,10 @@ class App extends React.Component {
                     ) : null}
                   </div>
 
-                  {/* Scroll To Top Button */}
-                  {this.state.scrollBtnVizibility ? (
-                    <button
-                      className="scroll-top-btn"
-                      onClick={() => this.handleScrollToTop()}
-                    >
-                      <i className="fas fa-arrow-circle-up fa-2x"></i>
-                    </button>
-                  ) : null}
+                  <ScrollToTopBtn
+                    scrollBtnVizibility={this.state.scrollBtnVizibility}
+                    handleScrollToTop={() => this.handleScrollToTop()}
+                  />
                 </div>
               )}
             />

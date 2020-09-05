@@ -92,17 +92,3 @@
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
 }
-
-/* Scoll To Top Button */
-.scroll-top-btn {
-  z-index: 1;
-  cursor: pointer;
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  padding: 0.5rem;
-  border-radius: 10px;
-  background-color: #fff;
-  outline: none;
-  border: 3px solid #000;
-}
