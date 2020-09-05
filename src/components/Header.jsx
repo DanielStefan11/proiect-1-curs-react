@@ -1,12 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import "./styling/Header.css";
 
 function Header() {
   return (
     <header>
-      <h3>Călin Daniel Ștefan</h3>
-      <Link to="/">Acasă</Link>
-      <Link to="/despre">Despre</Link>
+      <Link to="/" className="logo">
+        Călin Daniel Ștefan
+      </Link>
+      <div>
+        <NavLink exact to="/" activeClassName="selected">
+          Acasă
+        </NavLink>
+        <NavLink to="/despre" activeClassName="selected">
+          Despre
+        </NavLink>
+      </div>
     </header>
   );
 }
