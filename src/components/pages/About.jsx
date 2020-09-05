@@ -6,9 +6,8 @@ import { SiHtml5, SiCss3, SiJavascript, SiReact } from "react-icons/si";
 function About() {
   return (
     <div className="about-page">
-      <div className='about-heading-container'>
+      <div className="about-heading-container">
         <h1>Despre acest proiect</h1>
-        <div className="about-underscore"></div>
       </div>
 
       <h3>Tehnologii utilizate</h3>
