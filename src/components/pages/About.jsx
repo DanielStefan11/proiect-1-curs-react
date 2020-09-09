@@ -1,9 +1,12 @@
 import React from "react";
 import "../styling/About.css";
+import ScrollToTopBtn from "../ScrollToTopBtn";
 // React icons
 import { SiHtml5, SiCss3, SiJavascript, SiReact } from "react-icons/si";
 
-function About() {
+function About(props) {
+  const { scrollBtnVizibility, handleScrollToTop } = props;
+
   return (
     <div className="about-page">
       <div className="about-heading-container">
@@ -64,6 +67,10 @@ function About() {
           </ul>
         </div>
       </div>
+      <ScrollToTopBtn
+        scrollBtnVizibility={scrollBtnVizibility}
+        handleScrollToTop={() => handleScrollToTop()}
+      />
     </div>
   );
 }

@@ -1,14 +1,19 @@
 import React from "react";
+// CSS
+import "./App.css";
+// Components
 import UserAddForm from "./components/UserAddForm";
 import UserList from "./components/UserList";
 import PostList from "./components/PostList";
-import "./App.css";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
+// Data Base
 import users from "./utils/users.json";
+// React Router
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+// Pages
 import Layout from "./components/Layout";
 import About from "./components/pages/About";
 import Page404 from "./components/pages/Page404";
-import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 class App extends React.Component {
   constructor() {
@@ -245,7 +250,17 @@ class App extends React.Component {
                 </div>
               )}
             />
-            <Route path="/despre" component={About} />
+
+            <Route
+              path="/despre"
+              render={() => (
+                <About
+                  scrollBtnVizibility={this.state.scrollBtnVizibility}
+                  handleScrollToTop={() => this.handleScrollToTop()}
+                />
+              )}
+            />
+
             <Route path="*" component={Page404} />
           </Switch>
         </Layout>
