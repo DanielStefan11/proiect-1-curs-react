@@ -8,11 +8,7 @@ function ScrollToTopBtn(props) {
   return (
     <div>
       {scrollBtnVizibility ? (
-        <button
-          style={scrollBtn}
-          className="scroll-top-btn"
-          onClick={() => handleScrollToTop()}
-        >
+        <button style={scrollBtn} onClick={() => handleScrollToTop()}>
           <FaArrowCircleUp size="1.7rem" />
         </button>
       ) : null}
