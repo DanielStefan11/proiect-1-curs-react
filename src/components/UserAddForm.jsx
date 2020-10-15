@@ -40,12 +40,11 @@ class UserAddForm extends React.Component {
     if (this.state.name.length < 3 || !this.state.name) {
       nameError = "Trebuie să introduci un nume!";
     }
-    // if (!this.state.email.includes("@")) {
-    //   emailError = "Adresa email nu este validă!";
-    // }
+
     if (!emailModel.test(this.state.email)) {
       emailError = "Adresa email nu este validă!";
     }
+
     if (!this.state.salary) {
       salaryError = "Trebuie să introduci salariul!";
     }
